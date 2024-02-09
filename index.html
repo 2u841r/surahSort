@@ -9,8 +9,9 @@
     <style>
     table {
         border-collapse: collapse;
-        table-layout: auto; /* Allow table to adjust cell sizes based on content */
-        width: 100%; /* Optional: Make the table fill its container */
+        table-layout: auto;
+        max-width: 100%;
+        overflow-x: auto; 
     }
     td {
         border: 1px solid black; 
@@ -18,20 +19,20 @@
         text-align: center;
     }
     .first-column, .second-column, .fourth-column {
-        width: 15%; /* Set the width of the first two columns to 15% */
+        width: 5%; 
     }
     </style>
 </head>
 
 <body>
 
-    <table id="quranTable" class="display" style="width:100%">
+    <table id="quranTable" >
         <thead>
             <tr>
-                <th class="first-column">Number</th>
-                <th class="second-column"> Revelation </th>
+                <th class="first-column">Serial Number</th>
+                <th class="second-column"> Revelation Order </th>
                 <th>Name</th>
-                <th>Ayahs</th>
+                <th>Number of Ayahs</th>
                 <th>Type</th>
             </tr>
         </thead>
@@ -62,12 +63,14 @@
                         { data: 'Number of Ayahs' },
                         { data: 'Type' }
                     ],
-                    "pageLength": 12, // Show 10 entries per page
-                    "lengthMenu": [10, 25, 50, 100], // Options for entries per page
+                    "pageLength": 15, // Show 10 entries per page
+                    "lengthMenu": [10, 15, 25, 50, 100], // Options for entries per page
                     "pagingType": "full_numbers" // Pagination style
                 });
             });
         });
+
+        
     </script>
 
 </body>
