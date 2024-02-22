@@ -1,0 +1,14 @@
+   table {
+        border-collapse: collapse;
+        table-layout: auto;
+        max-width: 100%;
+        overflow-x: auto; 
+    }
+    td {
+        border: 1px solid black; 
+        padding: 8px; 
+        text-align: center;
+    }
+    .first-column, .second-column, .fourth-column {
+        width: 5%; 
+    }
